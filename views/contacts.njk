@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "./partials/head.njk" %}
+<body>
+  {% include "./partials/header.njk" %}
+  <main class="mainContent">
+    <h1>Contacts</h1>
+    <ul>
+      {% if contacts.length %}
+        {% for contact in contacts %}
+          <li><a href="{{ contact.link }}" target="_blank">{{ contact.name }}</a></li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </main>
+</body>
+</html>

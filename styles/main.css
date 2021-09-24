@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.logo span {
+  color: #88c249;
+}
+.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  flex: 0 0 auto;
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+.navigation__item {
+  list-style: none;
+}
+.navigation__item:not(:last-child) {
+  margin-right: 30px;
+}
+.navigation__link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.2s ease-in;
+}
+.navigation__link:hover {
+  color: #88c249;
+  text-decoration: none;
+}
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  align-items: center;
+  padding: 30px;
+}
+.cardPost {
+  display: block;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  margin-bottom: 30px;
+}
+.cardPost__title a{
+  transition: all 0.2s ease-in;
+  color: #333;
+}
+.cardPost__title a:hover {
+  color: #88c249;
+}
+.cardPost__desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  white-space: normal;
+  text-overflow: ellipsis;
+  line-height: 140%;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+.cardPost__header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardPost__footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.postPage__header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+form {
+  width: 100%;
+}
+.form-control {
+  margin-bottom: 20px;
+}
+.formAction {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.btnIcon{
+  color: #333;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  flex: 0 0 auto;
+}
+.btnIcon:hover{
+  color: #88c249;
+}
+.btnIcon:not(:last-child){
+  margin-right: 10px;
+}

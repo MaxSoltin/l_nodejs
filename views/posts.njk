@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "./partials/head.njk" %}
+  <body>
+    {% include "./partials/header.njk" %}
+    <main class="mainContent">
+      <div class="container">
+        <div class="row">
+          {% if posts.length %}
+            {% for post in posts %}
+              <div class="col-6">
+                <div class="cardPost">
+                  <div class="cardPost__header">
+                    <h3 class="cardPost__title"><a href="/post/{{post.id}}">{{ post.title }}</a></h3>
+                    <button class="btnIcon" data-id="{{ post.id }}"><i class="far fa-trash-alt" data-id="{{ post.id }}"></i></button>
+                  </div>
+                  <p class="cardPost__desc">{{ post.text }}</p>
+                  <div class="cardPost__footer">
+                    <span>{{ post.createdAt | formatDate }}</span>
+                    <span>{{ post.author }}</span>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener('click', (e) => {
+        const id = e.target?.dataset?.id || null
+        if(id){
+          fetch(`/post/${id}`, {
+            method: 'DELETE'
+          }).then(() => {
+            window.location.reload()
+          })
+        }
+      })
+    </script>
+  </body>
+</html>
